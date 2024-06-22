@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: "source-code-pro", Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+:root {
+  --theme: #ecf0f3;
+  --font: #444;
+  --place: #666;
+  --lts: #fff;
+  --dks: #ccc;
+  user-select: none;
+}
+
+.active {
+  --theme: #222;
+  --font: #ecf0f3;
+  --place: #555;
+  --lts: #2c2c2c;
+  --dks: #191919;
+}
+
+.container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--theme);
+}
+
+.container .theme_btn {
+  color: var(--font);
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+}
+
+.container .box {
+  height: 30rem;
+  width: 20rem;
+  box-shadow: 0.5rem 0.5rem 1rem var(--dks), -0.5rem -0.5rem 1rem var(--lts);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.box .heading {
+  background-color: #22aaff;
+  margin-block: 2rem;
+  color: var(--theme);
+  font-weight: 500;
+  text-align: center;
+}
+
+.box .inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.inputs input {
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  width: 60%;
+  background: var(--theme);
+  border-bottom: 0.1rem solid var(--place);
+  color: var(--font);
+  text-align: center;
+}
+
+input:focus {
+  border-bottom: 0.1rem solid #22aaff;
+}
+
+input::placeholder {
+  color: var(--place);
+}
+
+.inputs .button_add {
+  border-radius: 50%;
+  color: #22aaff;
+  aspect-ratio: 1;
+  font-size: 1.2rem;
+  background: var(--theme);
+  box-shadow: 0.2rem 0.2rem 0.4rem var(--dks), -0.2rem -0.2rem 0.4rem var(--lts);
+}
+
+.inputs .button_add:hover {
+  background: #22aaff;
+  color: var(--theme);
+}
+
+.listbox {
+  margin-block: 2rem;
+  margin-inline: 1rem;
+}
+
+.listbox ol {
+  list-style: none;
+}
+
+ol .li {
+  color: #22aaff;
+  font-weight: 500;
+  margin-block: 0.5rem;
+}
+
+.li .button_delete {
+  border-radius: 50%;
+  color: #22aaff;
+  aspect-ratio: 1;
+  font-size: 0.8rem;
+  background: var(--theme);
+  border: 0.1rem solid #22aaff;
+  box-shadow: 0.2rem 0.2rem 0.4rem var(--dks), -0.2rem -0.2rem 0.4rem var(--lts),
+    inset 0.2rem 0.2rem 0.4rem var(--dks),
+    inset -0.2rem -0.2rem 0.4rem var(--lts);
+}
+
+.li .button_delete:hover {
+  border: 0.1rem solid #ff2222;
+  color: #ff2222;
+}
+
+.li span {
+  text-transform: capitalize;
+  margin-inline: 1rem;
+}
+
+@media (max-width: 520px) {
+  html {
+    font-size: 80%;
+  }
+}
